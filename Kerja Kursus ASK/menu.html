@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta name="viewport"content="width=device-width,initial-scale=1.0">
+    <title> MENU-HAPPINESS COFFEE WEBSITE </title>
+    <link rel="stylesheet" type="text/css"href="menu.css"> 
+    <script src="https://kit.fontawesome.com/1a9135d8ca.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+      </style>
+      
+ </head>
+ <body>
+    <section class="header">
+        <header>
+          <nav>
+           <div class='logo'>
+            <img src="logo-removebg-preview.png" width="125px">
+           </div>
+            <ul class="nav-links">
+              <a href="index.html">HOME</a>
+              <a href="menu.html">MENU</a>
+              <a href="ORDER.html">ORDER</a>
+              <a href="view.html">REVIEW</a>
+              <a href="about.html">ABOUT</a>
+            </ul>
+           <div class="icons">
+            <div class="fas fa-shopping-cart" id="cart-icon"></div>
+           </div> 
+          </nav>
+        </header>     
+
+        <div class="tab">
+          <button class="tablinks" onclick="openType(event, 'Cold Brew')">Cold Brew</button>
+          <button class="tablinks" onclick="openType(event, 'Café Beverages')">Café Beverages</button>
+          <button class="tablinks" onclick="openType(event, 'Gibraltar Beverages')">Gibraltar Beverages</button>
+          <button class="tablinks" onclick="openType(event, 'Hazelnut Special')">Hazelnut Special</button>
+        </div>
+        
+        <div id="Cold Brew" class="tabcontent">
+          <h3>Cold Brew</h3>
+          <div class="item">
+              <img src="cold brew latte.jpg"   width="100%">
+              <h1>Cold Brew Latte</h1>
+              <p class="price">RM14</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+        
+            <div class="item">
+              <img src="cold brew black.jpg"   width="100%">
+              <h1>Cold Brew Black</h1>
+              <p class="price">RM11</p>
+              <p><button>Add to Cart</button></p>
+            </div>
+        </div>
+        
+        <div id="Café Beverages" class="tabcontent">
+          <h3>Café Beverages</h3>
+          <div class="item">
+                <img src="Café Mocha.jpg"  width="100%">
+                <h1>Café Mocha</h1>
+                <p class="price">RM13</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+        
+              <div class="item">
+                <img src="Café Vanilla.jpg"   width="100%">
+                <h1>Café Vanilla</h1>
+                <p class="price">RM13</p>
+                <p><button>Add to Cart</button></p>
+              </div>
+        
+              <div class="item">
+                <img src="Today's Brew.jpg"   width="100%">
+                <h1>Today's Brew</h1>
+                <p class="price">RM9</p>
+                <p><button>Add to Cart</button></p>
+              </div> 
+        </div>
+        
+        <div id="Gibraltar Beverages" class="tabcontent">
+          <h3>Gibraltar Beverages</h3>
+          <div class="item">
+                  <img src="Iced Gibraltar Americano.jpg"   width="100%">
+                  <h1>Iced Gibraltar Americano</h1>
+                  <p class="price">RM11</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+          
+                <div class="item">
+                  <img src="Iced Gibraltar Latte.jpg"   width="100%">
+                  <h1>Iced Gibraltar Latte</h1>
+                  <p class="price">RM13</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+          
+                <div class="item">
+                  <img src="Iced Gibraltar Mocha Latte.jpg"  width="100%">
+                  <h1>Iced Gibraltar Mocha Latte</h1>
+                  <p class="price">RM15</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+        </div>
+        
+        <div id="Hazelnut Special" class="tabcontent">
+          <h3>Hazelnut Special</h3>
+          <div class="item">
+                  <img src="Matcha Hazelnut Ice Blended.jpg" width="100%" >
+                  <h1>Matcha Hazelnut Ice Blended</h1>
+                  <p class="price">RM17</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+            
+                <div class="item">
+                  <img src="Matcha Hazelnut Tea Latte.jpg" width="100%">
+                  <h1>Matcha Hazelnut Tea Latte</h1>
+                  <p class="price">RM17</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+            
+                <div class="item">
+                  <img src="Iced Hazelnut Latte.jpg"  width="100%">
+                  <h1>Iced Hazelnut Latte</h1>
+                  <p class="price">RM15</p>
+                  <p><button>Add to Cart</button></p>
+                </div>
+        </div>
+        <script>
+          function openType(evt, typeName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(typeName).style.display = "block";
+            evt.currentTarget.className += " active";
+          }
+          </script>        
